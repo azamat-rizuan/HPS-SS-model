@@ -1,9 +1,9 @@
 # HPS-SS-model
 
 ## Addition of Coarse-Grained Dihedral angle potential for IDPs
-Authors: Azamat Rizuan [1], Nina Jovic [1], Young C. Kim [2], Jeetain Mittal [1]
-[1] Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, Texas
-[2] Center for Materials Physics and Technology, Naval Research Laboratory, Washington, District of Columbia
+Authors: Azamat Rizuan [1], Nina Jovic [1], Young C. Kim [2], Jeetain Mittal [1]  
+[1] Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, Texas  
+[2] Center for Materials Physics and Technology, Naval Research Laboratory, Washington, District of Columbia  
 
 ## Source codes:
 
