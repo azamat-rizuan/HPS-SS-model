@@ -12,7 +12,9 @@ The files within LAMMPS_subroutines need to be added to the LAMMPS Oct 2020 vers
 Helix fraction script (HelixFracDihed15.f90) is used to test different helix assignment rules
 
 The script requires xtc library to compile:
+```
 ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
+```
 
 To run the script:
 
