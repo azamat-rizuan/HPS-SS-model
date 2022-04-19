@@ -7,6 +7,12 @@ Addition of Coarse-Grained Dihedral angle potential for IDPs
 CG simulations were performed using the LAMMPS molecular dynamics simulations package (Oct 2020 version), in which HPS-SS codes have been implemented.
 The files within LAMMPS_subroutines need to be added to the LAMMPS Oct 2020 version before compilation.
 
+###Input parameters are:
+* Aminoacid hydropathy scale (aminoacids_hydropathy.dat)
+* Van der Waals diameter of aminoacids (aminoacids_vdwdiameter.dat)
+* Dihedral angle parameters (**eps_d**) for (i,i+2)  and (i,i+4) rules (eps_d_i+1_i+2.txt, eps_d_i_i+4.txt)
+
+
 ## 1. Cα-based helix assignment rules
 
 Helix fraction script (HelixFracDihed15.f90) is used to test different helix assignment rules
