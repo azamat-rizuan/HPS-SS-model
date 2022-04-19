@@ -18,10 +18,14 @@ ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
 
 To run the script:
 
-**for (i,i+2) rule:** ./gethelixfrac -x traj.xtc -o helix.dat -dihed 0.25 1.3 -assign 0110 -nn 1 -block 5 -eq 1000
-
-**for (i,i+4) rule:** ./gethelixfrac -x traj.xtc -o helix.dat -dihed 0.25 1.7 -assign 0110 -nn 3 010 -block 5 -eq 1000
-
+*for (i,i+2) rule:
+```
+./gethelixfrac -x traj.xtc -o helix.dat -dihed 0.25 1.3 -assign 0110 -nn 1 -block 5 -eq 1000
+```
+*for (i,i+4) rule:*
+```
+./gethelixfrac -x traj.xtc -o helix.dat -dihed 0.25 1.7 -assign 0110 -nn 3 010 -block 5 -eq 1000
+```
  The output is then compared with the DSSP-based helix fraction of Ala40 peptide from atomistic simulation (AA-A40 folder)
 
 ## 2. Parameterization
