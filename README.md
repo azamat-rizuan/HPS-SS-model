@@ -1,6 +1,6 @@
 # HPS-SS-model
 
-## Addition of Coarse-Grained Dihedral angle potential for IDPs
+## Developing transferable bonded potentials for a coarse-grained model of Intrinsically Disordered Proteins
 
 **Authors:** Azamat Rizuan [1], Nina Jovic [1], Young C. Kim [2], Jeetain Mittal [1]  
 [1] Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, Texas  
