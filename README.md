@@ -30,18 +30,22 @@ ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
 
 ## 2. Parameterization
 
-a) A40 simulations with different **eps_d** values to figure out the reference value for highest helicity to match the experimental helical propensity for Alanine.
-The example is given in /parameterization/ala_40/
+* A40 simulations with different **eps_d** values to figure out the reference value for highest helicity to match the experimental helical propensity for Alanine. The example is given in /parameterization/ala_40/
 
-b) Helix propensity code (HelixPropensity.f90) was used to compute helix propensity (w) directly from the simulation trajectory.
-
-to compile: ifort -o gethelixprop HelixPropensity.f90 -lxdrf -L/xtc
-
+* Helix propensity code (HelixPropensity.f90) was used to compute helix propensity (w) directly from the simulation trajectory. To compile: 
+```
+ifort -o gethelixprop HelixPropensity.f90 -lxdrf -L/xtc
+```
 to run: 
 
-**for (i,i+2) rule:** ./gethelixprop -x alanine.xtc -p alanine.pdb -o helicity_ala.dat -dihed 0.25 1.3 -assign 0110 -nn 1 010 -block 5 -eq 100000 -nmc 100000 -seed 1234567
-
-**for (i,i+4) rule:** ./gethelixprop -x alanine.xtc -p alanine.pdb -o helicity_ala.dat -dihed 0.25 1.7 -assign 0110 -nn 3 010 -block 5 -eq 100000 -nmc 100000 -seed 1234567
+* for (i,i+2) rule:
+```
+./gethelixprop -x alanine.xtc -p alanine.pdb -o helicity_ala.dat -dihed 0.25 1.3 -assign 0110 -nn 1 010 -block 5 -eq 100000 -nmc 100000 -seed 1234567
+```
+* for (i,i+4) rule:
+```
+./gethelixprop -x alanine.xtc -p alanine.pdb -o helicity_ala.dat -dihed 0.25 1.7 -assign 0110 -nn 3 010 -block 5 -eq 100000 -nmc 100000 -seed 1234567
+```
 
 c) **eps_d** for remaining 19 residues determined using a host-guest system such as A20XA20 or A20X4A20
 The example is given in parameterization/A20XA20_example/ directory
