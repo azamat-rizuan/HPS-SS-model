@@ -1,6 +1,9 @@
 # HPS-SS-model
 
-Addition of Coarse-Grained Dihedral angle potential for IDPs
+## Addition of Coarse-Grained Dihedral angle potential for IDPs
+Authors: Azamat Rizuan [1], Nina Jovic [1], Young C. Kim [2], Jeetain Mittal [1]
+[1] Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, Texas
+[2] Center for Materials Physics and Technology, Naval Research Laboratory, Washington, District of Columbia
 
 ## Source codes:
 
@@ -57,8 +60,13 @@ for (i,i+4) rule:
 The example is given in parameterization/A20XA20_example/ directory
 
 ## 3. Validation (check /examples/ctd/ directory)
+
 * TDP-43 CTD files was added as an example for the validation step
 *  Simulated helix fraction was calculated from TDP-43 CTD single chain simulation trajectory using the parameters for (i,i+4) rule
 * From the available NMR data from BMRM database, a single residue-specific secondary structure propensity (SSP) score is calculated based on the deviations of NMR chemical shifts from Poulsen IDP/IUP random coil chemical shifts.
 * Poulsen IDP/IUP random coil chemical shifts: https://spin.niddk.nih.gov/bax/nmrserver/Poulsen_rc_CS/
 * SSP: http://pound.med.utoronto.ca/software.html
+
+## LICENSE AND DISCLAIMER
+
+Redistribution and use of this software in source and binary forms, with or without modification, are permitted provided that this statement and the following disclaimer are retained. THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
