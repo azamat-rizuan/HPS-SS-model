@@ -19,7 +19,7 @@ atom_style  full
 
 bond_style  harmonic
 angle_style bch
-dihedral_style gaussian/ljlambda
+dihedral_style gaussian
 
 pair_style  ljlambda 0.1 0.0 35.0
 dielectric  80.0
@@ -32,8 +32,8 @@ bond_coeff          1   10.000000    3.800000
 
 angle_coeff         1    4.300000
 
-dihedral_coeff        1    0.200000    5.100000    0.000000   -1.649500
-dihedral_coeff        2    0.200000    5.100000    0.000000   -0.212125
+dihedral_coeff        1    -1.649500
+dihedral_coeff        2    -0.212125
 
 pair_coeff          1       1       0.200000   5.040    0.522942  20.160   0.000
 pair_coeff          1       2       0.200000   5.260    0.761471  21.040   0.000
