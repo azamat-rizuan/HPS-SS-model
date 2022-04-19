@@ -2,14 +2,14 @@
 
 Addition of Coarse-Grained Dihedral angle potential for IDPs
 
-**Source codes:**
+## Source codes:
 
 CG simulations were performed using the LAMMPS molecular dynamics simulations package (Oct 2020 version), in which HPS-SS codes have been implemented.
 The files within LAMMPS_subroutines need to be added to the LAMMPS Oct 2020 version before compilation.
 
-**Cα-based helix assignment rules**
+## Cα-based helix assignment rules
 
-**1.  Helix fraction script** (HelixFracDihed15.f90) is used to test different helix assignment rules
+Helix fraction script (HelixFracDihed15.f90) is used to test different helix assignment rules
 
 The script requires xtc library to compile:
 ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
@@ -22,7 +22,7 @@ To run the script:
 
  The output is then compared with the DSSP-based helix fraction of Ala40 peptide from atomistic simulation (AA-A40 folder)
 
-**2. Parameterization**
+## 2. Parameterization
 
 a) A40 simulations with different **eps_d** values to figure out the reference value for highest helicity to match the experimental helical propensity for Alanine.
 The example is given in /parameterization/ala_40/
@@ -40,7 +40,7 @@ to run:
 c) **eps_d** for remaining 19 residues determined using a host-guest system such as A20XA20 or A20X4A20
 The example is given in parameterization/A20XA20_example/ directory
 
-**3. Validation**
+## 3. Validation 
 a) TDP-43 CTD files was added as an example for the validation step
 b) Simulated helix fraction was calculated from TDP-43 CTD single chain simulation trajectory using the parameters for (i,i+4) rule
 c) From the available NMR data from BMRM database, a single residue-specific secondary structure propensity (SSP) score is calculated based on the deviations of NMR chemical shifts from Poulsen IDP/IUP random coil chemical shifts:
