@@ -21,8 +21,8 @@ To run the script:
 **for (i,i+4) rule:** ./gethelixfrac -x traj.xtc -o helix.dat -dihed 0.25 1.7 -assign 0110 -nn 3 010 -block 5 -eq 1000
 
 3) The output is then compared with the DSSP-based helix fraction of Ala40 peptide from atomistic simulation (AA-A40 folder)
-
-**Parameterization**
+_
+**Parameterization**_
 
 1) A40 simulations with different **eps_d** values to figure out the reference value for highest helicity to match the experimental helical propensity for Alanine.
 2) Helix propensity code (HelixPropensity.f90) was used to compute helix propensity (w) directly from the simulation trajectory.
