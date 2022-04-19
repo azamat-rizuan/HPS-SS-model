@@ -4,10 +4,10 @@ Addition of Coarse-Grained Dihedral angle potential for IDPs
 
 ## Source codes:
 
-CG simulations were performed using the LAMMPS molecular dynamics simulations package (Oct 2020 version), in which HPS-SS codes have been implemented.
-The files within LAMMPS_subroutines need to be added to the LAMMPS Oct 2020 version before compilation.
+CG simulations were performed using the LAMMPS molecular dynamics simulations package (Oct 2020 version), in which HPS-SS codes have been implemented. To run these codes successfully one would require LAMMPS Oct 2020 package installed with the files within LAMMPS_subroutines.
 
-###Input parameters are:
+
+### Input parameters of the HPS-SS model:
 * Aminoacid hydropathy scale (aminoacids_hydropathy.dat)
 * Van der Waals diameter of aminoacids (aminoacids_vdwdiameter.dat)
 * Dihedral angle parameters (**eps_d**) for (i,i+2)  and (i,i+4) rules (eps_d_i+1_i+2.txt, eps_d_i_i+4.txt)
@@ -56,7 +56,7 @@ for (i,i+4) rule:
 * **eps_d** for remaining 19 residues determined using a host-guest system such as A20XA20 or A20X4A20
 The example is given in parameterization/A20XA20_example/ directory
 
-## 3. Validation 
+## 3. Validation (check /examples/ctd/ directory)
 * TDP-43 CTD files was added as an example for the validation step
 *  Simulated helix fraction was calculated from TDP-43 CTD single chain simulation trajectory using the parameters for (i,i+4) rule
 * From the available NMR data from BMRM database, a single residue-specific secondary structure propensity (SSP) score is calculated based on the deviations of NMR chemical shifts from Poulsen IDP/IUP random coil chemical shifts.
