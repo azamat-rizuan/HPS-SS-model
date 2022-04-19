@@ -1,0 +1,65 @@
+# IDP simulation
+
+###### VARIABLES #######
+variable    t equal 300
+variable    damp equal 1000
+variable    seedV equal 4928421
+variable    seedT equal 3278431
+variable    seedtemper equal 32784
+variable    dt equal 10.0
+variable    thermointrv equal 100000
+variable    dumpintrv equal 1000
+variable    temperintrv equal 100
+variable    runtime equal 500000000
+
+units       real
+dimension   3
+boundary    p p p
+atom_style  full
+
+bond_style  harmonic
+angle_style bch
+dihedral_style gaussian/ljlambda
+
+pair_style  ljlambda 0.1 0.0 35.0
+dielectric  80.0
+
+read_data   XXX.data
+
+# pairwise coefficients
+
+bond_coeff          1   10.000000    3.800000
+
+angle_coeff         1    4.300000
+
+dihedral_coeff        1    0.200000    5.100000    0.000000   -2.590000
+dihedral_coeff        2    0.200000    5.100000    0.000000   -1.417500
+
+pair_coeff          1       1       0.200000   5.040    0.522942  20.160   0.000
+pair_coeff          1       2       0.200000   5.260    0.761471  21.040   0.000
+pair_coeff          2       2       0.200000   5.480    1.000000  21.920   0.000
+
+special_bonds lj/coul 0.0 0.0 0.0
+
+neighbor    3.5 multi
+neigh_modify  every 10 delay 0
+
+### Energy minimization
+minimize    1.0e-4 1.0e-6 1000 100000
+
+### production
+timestep    ${dt}
+reset_timestep 0
+
+velocity    all create $t ${seedV}
+fix         1 all langevin $t $t ${damp} ${seedT}
+fix         2 all nve
+
+thermo     ${thermointrv}
+thermo_style custom step evdwl ecoul ebond eangle edihed temp
+
+dump       VMD1 all xtc ${dumpintrv} alanine.xtc
+
+run     ${runtime}
+
+write_restart restart.bin_alanine
