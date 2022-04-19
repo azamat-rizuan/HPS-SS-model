@@ -16,7 +16,7 @@ The script requires xtc library to compile:
 ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
 ```
 
-### To run the script:
+#### To run the script:
 
 for (i,i+2) rule:
 ```
