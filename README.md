@@ -1,9 +1,10 @@
 # HPS-SS-model
 
-Coarse-Grained Dihedral angle potential for IDPs
+Addition of Coarse-Grained Dihedral angle potential for IDPs
 
+****Source codes:**
 CG simulations were performed using the LAMMPS molecular dynamics simulations package (Oct 2020 version), in which HPS-SS codes have been implemented.
-
+The files within LAMMPS_subroutines need to be added to the LAMMPS Oct 2020 version before compilation.
 
 **Cα-based helix assignment rules**
 1) Helix fraction script (HelixFracDihed15.f90) is used to test different helix assignment rules
