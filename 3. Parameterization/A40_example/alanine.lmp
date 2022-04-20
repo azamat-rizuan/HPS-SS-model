@@ -26,8 +26,6 @@ dielectric  80.0
 
 read_data   alanine.data
 
-# pairwise coefficients
-
 bond_coeff          1   10.000000    3.800000
 
 angle_coeff         1    4.300000
