@@ -6,7 +6,7 @@
 [1] Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, Texas  
 [2] Center for Materials Physics and Technology, Naval Research Laboratory, Washington, District of Columbia  
 
-## Source codes:
+## 1. Source codes:
 
 CG simulations were performed using the LAMMPS molecular dynamics simulations package (Oct 2020 version), in which HPS-SS codes have been implemented. To run these codes successfully one would require LAMMPS Oct 2020 package installed with the files within 1.LAMMPS_subroutines.
 
@@ -33,7 +33,7 @@ dihedral_coeff        1    eps_d
 **eps_d** for a given dihedral angle φ(i,i+3) is determined by the mixing rule, denoted by 1-1001-1 (see Eq. 11 in the manuscript)
 
 
-## 1. Cα-based helix assignment rules
+## 2. Cα-based helix assignment rules
 
 Helix fraction script (HelixFracDihed15.f90) is used to test different helix assignment rules
 
@@ -63,7 +63,7 @@ for (i,i+4) rule:
 ```
  The output is then compared with the DSSP-based helix fraction of Ala40 peptide from atomistic simulation (/2.AA-A40 directory)
 
-## 2. Parameterization
+## 3. Parameterization
 
 * A40 simulations with different **eps_d** values to figure out the reference value for highest helicity to match the experimental helical propensity for Alanine. The example is given in /3.Parameterization/A40_example/
 
@@ -97,7 +97,7 @@ for (i,i+4) rule:
 * **eps_d** for remaining 19 residues determined using a host-guest system such as A20XA20 or A20X4A20
 The example is given in parameterization/A20XA20_example/ directory
 
-## 3. Validation (check /4.Validation directory)
+## 4. Validation (check /4.Validation directory)
 
 * TDP-43 CTD files was added as an example for the validation step
 *  Simulated helix fraction was calculated from TDP-43 CTD single chain simulation trajectory using the parameters for (i,i+4) rule
@@ -105,8 +105,9 @@ The example is given in parameterization/A20XA20_example/ directory
 * Poulsen IDP/IUP random coil chemical shifts: https://spin.niddk.nih.gov/bax/nmrserver/Poulsen_rc_CS/
 * SSP: http://pound.med.utoronto.ca/software.html
 
-## 4. Rg calculation
+## 5. Rg calculation
 
+* The average radius of gyration for 42 IDPs in comparison with the previous model (HPS-Urry) without angle and dihedral angle potentials is provided.
 
 ## LICENSE AND DISCLAIMER
 
