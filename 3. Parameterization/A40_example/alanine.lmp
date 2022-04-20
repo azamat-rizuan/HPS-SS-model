@@ -32,7 +32,7 @@ bond_coeff          1   10.000000    3.800000
 angle_coeff         1    4.300000
 # dihedral angle parameters
 dihedral_coeff        1    -1.649500
-
+# pairwise coefficients
 pair_coeff          1       1       0.200000   5.040    .522942  20.160   0.000
 
 special_bonds lj/coul 0.0 0.0 0.0
