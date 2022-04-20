@@ -1,2 +1,3 @@
 The average radius of gyration for 42 IDPs in comparison with the previous model (HPS-Urry) without angle and dihedral angle potentials.
 Gromacs (gmx polystat) has been used to calculate the radius of gyration of IDPs.
+The difference between the Rg distributions from two models calculated using scipy.spatial.distance.jensenshannon and scipy.special.rel_entr packages.
