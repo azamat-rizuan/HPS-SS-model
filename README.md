@@ -73,6 +73,13 @@ ifort -o gethelixprop HelixPropensity.f90 -lxdrf -L/xtc
 ```
 **Options:**
 ```
+-x(-xtc): xtc file
+-o(-out): output file
+-dihed(-dihedral): dihedral angle range
+-assign: h' assignment rule
+-nn(-nneighbor): number of neighboring 2*n residues
+-e(-eq): equilibration step
+-block: number of blocks
 -nmc: number of MC steps
 -s(-seed): RNG seed
 ```
