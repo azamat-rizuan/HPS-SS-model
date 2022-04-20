@@ -12,7 +12,8 @@ CG simulations were performed using the LAMMPS molecular dynamics simulations pa
 
 
 ### Input parameters of the HPS-SS model:
-* Aminoacid hydropathy scale (aminoacids_hydropathy.dat) - pairwise parameters is calculated based on simple arithmetic mixing rule
+* The short-range van der Waals (vdW) and long-range electrostatic interactions between residues i and j is the same as HPS-Urry model (for more details https://doi.org/10.1002/pro.4094)
+* Aminoacid hydropathy scale (aminoacids_hydropathy.dat)
 * Van der Waals diameter of aminoacids (aminoacids_vdwdiameter.dat)
 * Harmonic bond potential parameters
 ```
