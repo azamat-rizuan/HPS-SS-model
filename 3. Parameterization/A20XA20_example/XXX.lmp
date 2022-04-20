@@ -28,12 +28,15 @@ read_data   XXX.data
 
 # bond potential parameters
 bond_coeff          1   10.000000    3.800000
+
 # angle potential parameters 
 angle_coeff         1    4.300000
+
 # dihedral angle parameters
 dihedral_coeff        1    -1.649500
 dihedral_coeff        2    -0.212125
 
+# pairwise coefficients
 pair_coeff          1       1       0.200000   5.040    0.522942  20.160   0.000
 pair_coeff          1       2       0.200000   5.260    0.761471  21.040   0.000
 pair_coeff          2       2       0.200000   5.480    1.000000  21.920   0.000
