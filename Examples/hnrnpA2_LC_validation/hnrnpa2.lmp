@@ -19,7 +19,7 @@ atom_style  full
 
 bond_style  harmonic
 angle_style bch
-dihedral_style gaussian/ljlambda
+dihedral_style gaussian
 
 pair_style  ljlambda 0.1 0.0 35.0
 dielectric  80.0
@@ -32,66 +32,66 @@ bond_coeff          1   10.000000    3.800000
 
 angle_coeff         1    4.300000
 
-dihedral_coeff        1    0.200000    5.100000    0.000000   -0.023333
-dihedral_coeff        2    0.200000    5.100000    0.000000    0.182500
-dihedral_coeff        3    0.200000    5.100000    0.000000    0.125000
-dihedral_coeff        4    0.200000    5.100000    0.000000   -0.180000
-dihedral_coeff        5    0.200000    5.100000    0.000000   -0.455000
-dihedral_coeff        6    0.200000    5.100000    0.000000   -0.187500
-dihedral_coeff        7    0.200000    5.100000    0.000000    0.317500
-dihedral_coeff        8    0.200000    5.100000    0.000000    0.050000
-dihedral_coeff        9    0.200000    5.100000    0.000000   -0.312500
-dihedral_coeff       10    0.200000    5.100000    0.000000   -0.035000
-dihedral_coeff       11    0.200000    5.100000    0.000000   -0.177500
-dihedral_coeff       12    0.200000    5.100000    0.000000    0.287500
-dihedral_coeff       13    0.200000    5.100000    0.000000    0.297500
-dihedral_coeff       14    0.200000    5.100000    0.000000    0.155000
-dihedral_coeff       15    0.200000    5.100000    0.000000   -0.122500
-dihedral_coeff       16    0.200000    5.100000    0.000000    1.412500
-dihedral_coeff       17    0.200000    5.100000    0.000000    1.145000
-dihedral_coeff       18    0.200000    5.100000    0.000000    0.812500
-dihedral_coeff       19    0.200000    5.100000    0.000000    1.080000
-dihedral_coeff       20    0.200000    5.100000    0.000000    1.422500
-dihedral_coeff       21    0.200000    5.100000    0.000000    1.155000
-dihedral_coeff       22    0.200000    5.100000    0.000000    0.575000
-dihedral_coeff       23    0.200000    5.100000    0.000000    0.392500
-dihedral_coeff       24    0.200000    5.100000    0.000000    0.060000
-dihedral_coeff       25    0.200000    5.100000    0.000000   -0.540000
-dihedral_coeff       26    0.200000    5.100000    0.000000   -0.217500
-dihedral_coeff       27    0.200000    5.100000    0.000000    0.327500
-dihedral_coeff       28    0.200000    5.100000    0.000000    0.307500
-dihedral_coeff       29    0.200000    5.100000    0.000000   -0.015000
-dihedral_coeff       30    0.200000    5.100000    0.000000   -0.282500
-dihedral_coeff       31    0.200000    5.100000    0.000000    0.020000
-dihedral_coeff       32    0.200000    5.100000    0.000000   -0.045000
-dihedral_coeff       33    0.200000    5.100000    0.000000    0.382500
-dihedral_coeff       34    0.200000    5.100000    0.000000    0.650000
-dihedral_coeff       35    0.200000    5.100000    0.000000    0.822500
-dihedral_coeff       36    0.200000    5.100000    0.000000    0.145000
-dihedral_coeff       37    0.200000    5.100000    0.000000    0.670000
-dihedral_coeff       38    0.200000    5.100000    0.000000   -0.157500
-dihedral_coeff       39    0.200000    5.100000    0.000000   -0.425000
-dihedral_coeff       40    0.200000    5.100000    0.000000   -0.377500
-dihedral_coeff       41    0.200000    5.100000    0.000000    0.660000
-dihedral_coeff       42    0.200000    5.100000    0.000000    0.030000
-dihedral_coeff       43    0.200000    5.100000    0.000000   -0.580000
-dihedral_coeff       44    0.200000    5.100000    0.000000   -0.645000
-dihedral_coeff       45    0.200000    5.100000    0.000000   -0.567500
-dihedral_coeff       46    0.200000    5.100000    0.000000    0.337500
-dihedral_coeff       47    0.200000    5.100000    0.000000   -0.350000
-dihedral_coeff       48    0.200000    5.100000    0.000000   -0.900000
-dihedral_coeff       49    0.200000    5.100000    0.000000    0.605000
-dihedral_coeff       50    0.200000    5.100000    0.000000    2.185000
-dihedral_coeff       51    0.200000    5.100000    0.000000    0.592500
-dihedral_coeff       52    0.200000    5.100000    0.000000   -0.912500
-dihedral_coeff       53    0.200000    5.100000    0.000000   -0.072500
-dihedral_coeff       54    0.200000    5.100000    0.000000    0.582500
-dihedral_coeff       55    0.200000    5.100000    0.000000   -0.445000
-dihedral_coeff       56    0.200000    5.100000    0.000000    0.097500
-dihedral_coeff       57    0.200000    5.100000    0.000000    0.640000
-dihedral_coeff       58    0.200000    5.100000    0.000000    0.250000
-dihedral_coeff       59    0.200000    5.100000    0.000000   -0.245000
-dihedral_coeff       60    0.200000    5.100000    0.000000   -0.466667
+dihedral_coeff        1    -0.023333
+dihedral_coeff        2    0.182500
+dihedral_coeff        3    0.125000
+dihedral_coeff        4    -0.180000
+dihedral_coeff        5    -0.455000
+dihedral_coeff        6    -0.187500
+dihedral_coeff        7    0.317500
+dihedral_coeff        8    0.050000
+dihedral_coeff        9    -0.312500
+dihedral_coeff       10    -0.035000
+dihedral_coeff       11    -0.177500
+dihedral_coeff       12    0.287500
+dihedral_coeff       13    0.297500
+dihedral_coeff       14    0.155000
+dihedral_coeff       15    -0.122500
+dihedral_coeff       16    1.412500
+dihedral_coeff       17    1.145000
+dihedral_coeff       18    0.812500
+dihedral_coeff       19    1.080000
+dihedral_coeff       20    1.422500
+dihedral_coeff       21    1.155000
+dihedral_coeff       22    0.575000
+dihedral_coeff       23    0.392500
+dihedral_coeff       24    0.060000
+dihedral_coeff       25    -0.540000
+dihedral_coeff       26    -0.217500
+dihedral_coeff       27    0.327500
+dihedral_coeff       28    0.307500
+dihedral_coeff       29    -0.015000
+dihedral_coeff       30    -0.282500
+dihedral_coeff       31    0.020000
+dihedral_coeff       32    -0.045000
+dihedral_coeff       33    0.382500
+dihedral_coeff       34    0.650000
+dihedral_coeff       35    0.822500
+dihedral_coeff       36    0.145000
+dihedral_coeff       37    0.670000
+dihedral_coeff       38    -0.157500
+dihedral_coeff       39    -0.425000
+dihedral_coeff       40    -0.377500
+dihedral_coeff       41    0.660000
+dihedral_coeff       42    0.030000
+dihedral_coeff       43    -0.580000
+dihedral_coeff       44    -0.645000
+dihedral_coeff       45    -0.567500
+dihedral_coeff       46    0.337500
+dihedral_coeff       47    -0.350000
+dihedral_coeff       48    -0.900000
+dihedral_coeff       49    0.605000
+dihedral_coeff       50    2.185000
+dihedral_coeff       51    0.592500
+dihedral_coeff       52    -0.912500
+dihedral_coeff       53    -0.072500
+dihedral_coeff       54    0.582500
+dihedral_coeff       55    -0.445000
+dihedral_coeff       56    0.097500
+dihedral_coeff       57    0.640000
+dihedral_coeff       58    0.250000
+dihedral_coeff       59    -0.245000
+dihedral_coeff       60    -0.466667
 
 pair_coeff          1       1       0.200000   4.500    0.493530  18.000   0.000
 pair_coeff          1       2       0.200000   5.290    0.589119  21.160   0.000
