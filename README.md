@@ -43,7 +43,15 @@ ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
 ```
 
 #### To run the script:
-
+```
+-x(-xtc): xtc file
+-o(-out): output file
+-dihed(-dihedral): dihedral angle range
+-assign: h' assignment rule
+-nn: number of neighboring 2*n residues
+-e(-eq): equilibration step
+-block: number of blocks
+```
 for (i,i+2) rule:
 ```
 ./gethelixfrac -x traj.xtc -o helix.dat -dihed 0.25 1.3 -assign 0110 -nn 1 -block 5 -eq 1000
