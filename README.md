@@ -15,7 +15,10 @@ CG simulations were performed using the LAMMPS molecular dynamics simulations pa
 * Aminoacid hydropathy scale (aminoacids_hydropathy.dat)
 * Van der Waals diameter of aminoacids (aminoacids_vdwdiameter.dat)
 * Dihedral angle parameters (**eps_d**) for (i,i+2)  and (i,i+4) rules (eps_d_i+1_i+2.txt, eps_d_i_i+4.txt)
-
+```
+dihedral_style gaussian
+dihedral_coeff        1    **eps_d**
+```
 
 ## 1. Cα-based helix assignment rules
 
