@@ -17,8 +17,10 @@ CG simulations were performed using the LAMMPS molecular dynamics simulations pa
 * Dihedral angle parameters (**eps_d**) for (i,i+2)  and (i,i+4) rules (eps_d_i+1_i+2.txt, eps_d_i_i+4.txt)
 ```
 dihedral_style gaussian
-dihedral_coeff        1    **eps_d**
+dihedral_coeff        1    eps_d
 ```
+**eps_d** for a given dihedral angle φ(i,i+3) is determined by the mixing rule, denoted by 1-1001-1 (see Eq. 11 in the manuscript)
+
 
 ## 1. Cα-based helix assignment rules
 
