@@ -43,6 +43,7 @@ ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
 ```
 
 #### To run the script:
+**Options:**
 ```
 -x(-xtc): xtc file
 -o(-out): output file
@@ -69,6 +70,11 @@ for (i,i+4) rule:
 * Helix propensity code (HelixPropensity.f90) was used to compute helix propensity (w) directly from the simulation trajectory. To compile: 
 ```
 ifort -o gethelixprop HelixPropensity.f90 -lxdrf -L/xtc
+```
+**Options:**
+```
+-nmc: number of MC steps
+-s(-seed): RNG seed
 ```
 to run: 
 
