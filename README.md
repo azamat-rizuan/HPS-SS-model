@@ -49,7 +49,7 @@ ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
 -o(-out): output file
 -dihed(-dihedral): dihedral angle range
 -assign: h' assignment rule
--nn: number of neighboring 2*n residues
+-nn(-nneighbor): number of neighboring 2*n residues
 -e(-eq): equilibration step
 -block: number of blocks
 ```
