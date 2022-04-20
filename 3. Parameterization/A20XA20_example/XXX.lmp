@@ -26,10 +26,11 @@ dielectric  80.0
 
 read_data   XXX.data
 
+# bond potential parameters
 bond_coeff          1   10.000000    3.800000
-
+# angle potential parameters 
 angle_coeff         1    4.300000
-
+# dihedral angle parameters
 dihedral_coeff        1    -1.649500
 dihedral_coeff        2    -0.212125
 
