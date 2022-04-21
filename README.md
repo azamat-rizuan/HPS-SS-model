@@ -53,7 +53,7 @@ ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
 -e(-eq): equilibration step
 -block: number of blocks
 ```
-for (i,i+2) rule:
+for (i+1,i+2) rule:
 ```
 ./gethelixfrac -x traj.xtc -o helix.dat -dihed 0.25 1.3 -assign 0110 -nn 1 -block 5 -eq 1000
 ```
@@ -85,7 +85,7 @@ ifort -o gethelixprop HelixPropensity.f90 -lxdrf -L/xtc
 ```
 to run: 
 
-for (i,i+2) rule:
+for (i+1,i+2) rule:
 ```
 ./gethelixprop -x alanine.xtc -p alanine.pdb -o helicity_ala.dat -dihed 0.25 1.3 -assign 0110 -nn 1 010 -block 5 -eq 100000 -nmc 100000 -seed 1234567
 ```
