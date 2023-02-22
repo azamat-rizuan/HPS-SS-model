@@ -5,6 +5,7 @@
 **Authors:** Azamat Rizuan [1], Nina Jovic [1], Tien M. Phan [1], Young C. Kim [2], Jeetain Mittal [1]  
 
 Journal of Chemical Information and Modeling 2022 62 (18), 4474-4485
+
 DOI: 10.1021/acs.jcim.2c00450
 
 [1] Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, Texas  
