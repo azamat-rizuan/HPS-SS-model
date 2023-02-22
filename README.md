@@ -39,7 +39,7 @@ Helix fraction script (HelixFracDihed15.f90) is used to test different helix ass
 
 The script requires xtc library to compile:
 ```
-ifort -o gethelixfrac HelixFracDihed15.f90 -lxdrf -L/xtc
+ifort -o gethelixfrac mtfort90.f90 HelixFracDihed15.f90 -lxdrf -L/xtc
 ```
 
 #### To run the script:
