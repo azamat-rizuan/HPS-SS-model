@@ -1,8 +1,12 @@
 # HPS-SS-model
 
-## Developing transferable bonded potentials for a coarse-grained model of Intrinsically Disordered Proteins
+## Developing Bonded Potentials for a Coarse-Grained Model of Intrinsically Disordered Proteins
 
-**Authors:** Azamat Rizuan [1], Nina Jovic [1], Young C. Kim [2], Jeetain Mittal [1]  
+**Authors:** Azamat Rizuan [1], Nina Jovic [1], Tien M. Phan [1], Young C. Kim [2], Jeetain Mittal [1]  
+
+Journal of Chemical Information and Modeling 2022 62 (18), 4474-4485
+DOI: 10.1021/acs.jcim.2c00450
+
 [1] Artie McFerrin Department of Chemical Engineering, Texas A&M University, College Station, Texas  
 [2] Center for Materials Physics and Technology, Naval Research Laboratory, Washington, District of Columbia  
 
