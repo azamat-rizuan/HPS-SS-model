@@ -1,0 +1,323 @@
+# IDP simulation
+
+###### VARIABLES #######
+variable    t equal 300
+variable    damp equal 1000
+variable    seedV equal 4928421
+variable    seedT equal 3278431
+variable    seedtemper equal 32784
+variable    dt equal 10.0
+variable    thermointrv equal 100000
+variable    dumpintrv equal 1000
+variable    temperintrv equal 1000
+variable    runtime equal 500000000
+
+units       real
+dimension   3
+boundary    p p p
+atom_style  full
+
+bond_style  harmonic
+angle_style bch
+dihedral_style gaussian/ljlambda
+
+pair_style  ljlambda 0.1 0.0 35.0
+dielectric  80.0
+
+read_data   in.data
+
+# pairwise coefficients
+
+bond_coeff          1   10.000000    3.800000
+
+angle_coeff         1    4.300000
+
+dihedral_coeff        1     -0.380000
+dihedral_coeff        2     -0.292500
+dihedral_coeff        3     -1.025000
+dihedral_coeff        4     -1.467500
+dihedral_coeff        5     -1.240000
+dihedral_coeff        6     -1.170000
+dihedral_coeff        7     -0.835000
+dihedral_coeff        8     -1.142500
+dihedral_coeff        9     -1.305000
+dihedral_coeff       10     -0.522500
+dihedral_coeff       11      0.315000
+dihedral_coeff       12     -0.122500
+dihedral_coeff       13      0.307500
+dihedral_coeff       14      1.080000
+dihedral_coeff       15      0.650000
+dihedral_coeff       16      0.050000
+dihedral_coeff       17      0.812500
+dihedral_coeff       18      1.145000
+dihedral_coeff       19     -0.092500
+dihedral_coeff       20     -0.157500
+dihedral_coeff       21      0.317500
+dihedral_coeff       22     -0.425000
+dihedral_coeff       23      0.047500
+dihedral_coeff       24     -0.187500
+dihedral_coeff       25      0.382500
+dihedral_coeff       26     -1.000000
+dihedral_coeff       27     -0.665000
+dihedral_coeff       28     -0.025000
+dihedral_coeff       29     -0.427500
+dihedral_coeff       30     -0.695000
+dihedral_coeff       31     -0.767500
+dihedral_coeff       32     -0.500000
+dihedral_coeff       33     -0.487500
+dihedral_coeff       34     -0.922500
+dihedral_coeff       35     -0.387500
+dihedral_coeff       36     -0.742500
+dihedral_coeff       37     -0.722500
+dihedral_coeff       38     -1.322500
+dihedral_coeff       39     -0.617500
+dihedral_coeff       40     -0.527500
+dihedral_coeff       41     -0.937500
+dihedral_coeff       42      0.002500
+dihedral_coeff       43     -0.065000
+dihedral_coeff       44     -1.567500
+dihedral_coeff       45     -1.252500
+dihedral_coeff       46     -0.227500
+dihedral_coeff       47     -1.017500
+dihedral_coeff       48     -2.342500
+dihedral_coeff       49     -1.760000
+dihedral_coeff       50     -2.007500
+dihedral_coeff       51     -2.590000
+dihedral_coeff       52     -2.455000
+dihedral_coeff       53     -1.785000
+dihedral_coeff       54     -1.445000
+dihedral_coeff       55     -1.640000
+dihedral_coeff       56     -1.620000
+dihedral_coeff       57     -0.950000
+dihedral_coeff       58     -1.145000
+dihedral_coeff       59     -0.697500
+dihedral_coeff       60     -0.362500
+dihedral_coeff       61     -1.150000
+dihedral_coeff       62     -1.960000
+dihedral_coeff       63     -1.057500
+dihedral_coeff       64     -1.537500
+dihedral_coeff       65     -1.577500
+dihedral_coeff       66     -1.237500
+dihedral_coeff       67     -0.970000
+dihedral_coeff       68     -0.635000
+dihedral_coeff       69      0.670000
+dihedral_coeff       70      0.335000
+dihedral_coeff       71     -0.495000
+dihedral_coeff       72      0.877500
+dihedral_coeff       73     -0.360000
+dihedral_coeff       74     -1.130000
+dihedral_coeff       75     -0.805000
+dihedral_coeff       76     -0.735000
+dihedral_coeff       77     -0.030000
+dihedral_coeff       78      0.107500
+dihedral_coeff       79     -1.072500
+dihedral_coeff       80     -1.752500
+dihedral_coeff       81     -0.342500
+dihedral_coeff       82     -0.760000
+dihedral_coeff       83     -0.217500
+dihedral_coeff       84     -0.287500
+dihedral_coeff       85     -0.352500
+dihedral_coeff       86     -0.285000
+dihedral_coeff       87     -0.220000
+dihedral_coeff       88     -0.620000
+dihedral_coeff       89     -0.020000
+dihedral_coeff       90     -1.572500
+dihedral_coeff       91     -1.272500
+dihedral_coeff       92     -0.195000
+dihedral_coeff       93     -0.610000
+dihedral_coeff       94     -1.420000
+dihedral_coeff       95     -1.005000
+dihedral_coeff       96     -0.945000
+dihedral_coeff       97     -0.402500
+dihedral_coeff       98     -0.762500
+dihedral_coeff       99     -0.830000
+dihedral_coeff      100     -0.017500
+dihedral_coeff      101     -0.015000
+dihedral_coeff      102     -0.282500
+dihedral_coeff      103     -0.580000
+dihedral_coeff      104     -0.607500
+dihedral_coeff      105     -0.382500
+dihedral_coeff      106     -0.755000
+dihedral_coeff      107     -0.982500
+dihedral_coeff      108     -0.535000
+dihedral_coeff      109     -0.582500
+dihedral_coeff      110     -0.546667
+
+pair_coeff          1       1       0.200000   4.500    0.493530  18.000   0.000
+pair_coeff          1       2       0.200000   5.290    0.589119  21.160   0.000
+pair_coeff          1       3       0.200000   5.340    0.545000  21.360   0.000
+pair_coeff          1       4       0.200000   5.090    0.500883  20.360   0.000
+pair_coeff          1       5       0.200000   5.530    0.486177  22.120   0.000
+pair_coeff          1       6       0.200000   5.260    0.486177  21.040   0.000
+pair_coeff          1       7       0.200000   5.340    0.567060  21.360   0.000
+pair_coeff          1       8       0.200000   5.210    0.206765  20.840   0.000
+pair_coeff          1       9       0.200000   4.840    0.500883  19.360   0.000
+pair_coeff          1      10       0.200000   5.430    0.618530  21.720   0.000
+pair_coeff          1      11       0.200000   5.030    0.586177  20.120   0.000
+pair_coeff          1      12       0.200000   4.770    0.508236  19.080   0.000
+pair_coeff          1      13       0.200000   5.340    0.559707  21.360   0.000
+pair_coeff          1      14       0.200000   5.640    0.706765  22.560   0.000
+pair_coeff          1      15       0.200000   5.480    0.655295  21.920   0.000
+pair_coeff          1      16       0.200000   5.040    0.353824  20.160   0.000
+pair_coeff          1      17       0.200000   5.430    0.397942  21.720   0.000
+pair_coeff          2       2       0.200000   6.080    0.684707  24.320   0.000
+pair_coeff          2       3       0.200000   6.130    0.640589  24.520   0.000
+pair_coeff          2       4       0.200000   5.880    0.596471  23.520   0.000
+pair_coeff          2       5       0.200000   6.320    0.581766  25.280   0.000
+pair_coeff          2       6       0.200000   6.050    0.581766  24.200   0.000
+pair_coeff          2       7       0.200000   6.130    0.662648  24.520   0.000
+pair_coeff          2       8       0.200000   6.000    0.302354  24.000   0.000
+pair_coeff          2       9       0.200000   5.630    0.596471  22.520   0.000
+pair_coeff          2      10       0.200000   6.220    0.714119  24.880   0.000
+pair_coeff          2      11       0.200000   5.820    0.681765  23.280   0.000
+pair_coeff          2      12       0.200000   5.560    0.603825  22.240   0.000
+pair_coeff          2      13       0.200000   6.130    0.655295  24.520   0.000
+pair_coeff          2      14       0.200000   6.430    0.802354  25.720   0.000
+pair_coeff          2      15       0.200000   6.270    0.750883  25.080   0.000
+pair_coeff          2      16       0.200000   5.830    0.449413  23.320   0.000
+pair_coeff          2      17       0.200000   6.220    0.493531  24.880   0.000
+pair_coeff          3       3       0.200000   6.180    0.596471  24.720   0.000
+pair_coeff          3       4       0.200000   5.930    0.552354  23.720   0.000
+pair_coeff          3       5       0.200000   6.370    0.537648  25.480   0.000
+pair_coeff          3       6       0.200000   6.100    0.537648  24.400   0.000
+pair_coeff          3       7       0.200000   6.180    0.618530  24.720   0.000
+pair_coeff          3       8       0.200000   6.050    0.258236  24.200   0.000
+pair_coeff          3       9       0.200000   5.680    0.552354  22.720   0.000
+pair_coeff          3      10       0.200000   6.270    0.670000  25.080   0.000
+pair_coeff          3      11       0.200000   5.870    0.637648  23.480   0.000
+pair_coeff          3      12       0.200000   5.610    0.559707  22.440   0.000
+pair_coeff          3      13       0.200000   6.180    0.611177  24.720   0.000
+pair_coeff          3      14       0.200000   6.480    0.758236  25.920   0.000
+pair_coeff          3      15       0.200000   6.320    0.706765  25.280   0.000
+pair_coeff          3      16       0.200000   5.880    0.405295  23.520   0.000
+pair_coeff          3      17       0.200000   6.270    0.449413  25.080   0.000
+pair_coeff          4       4       0.200000   5.680    0.508236  22.720   0.000
+pair_coeff          4       5       0.200000   6.120    0.493530  24.480   0.000
+pair_coeff          4       6       0.200000   5.850    0.493530  23.400   0.000
+pair_coeff          4       7       0.200000   5.930    0.574413  23.720   0.000
+pair_coeff          4       8       0.200000   5.800    0.214118  23.200   0.000
+pair_coeff          4       9       0.200000   5.430    0.508236  21.720   0.000
+pair_coeff          4      10       0.200000   6.020    0.625883  24.080   0.000
+pair_coeff          4      11       0.200000   5.620    0.593530  22.480   0.000
+pair_coeff          4      12       0.200000   5.360    0.515589  21.440   0.000
+pair_coeff          4      13       0.200000   5.930    0.567060  23.720   0.000
+pair_coeff          4      14       0.200000   6.230    0.714118  24.920   0.000
+pair_coeff          4      15       0.200000   6.070    0.662648  24.280   0.000
+pair_coeff          4      16       0.200000   5.630    0.361178  22.520   0.000
+pair_coeff          4      17       0.200000   6.020    0.405295  24.080   0.000
+pair_coeff          5       5       0.200000   6.560    0.478824  26.240  35.000
+pair_coeff          5       6       0.200000   6.290    0.478824  25.160   0.000
+pair_coeff          5       7       0.200000   6.370    0.559707  25.480   0.000
+pair_coeff          5       8       0.200000   6.240    0.199412  24.960  35.000
+pair_coeff          5       9       0.200000   5.870    0.493530  23.480   0.000
+pair_coeff          5      10       0.200000   6.460    0.611177  25.840   0.000
+pair_coeff          5      11       0.200000   6.060    0.578824  24.240   0.000
+pair_coeff          5      12       0.200000   5.800    0.500883  23.200   0.000
+pair_coeff          5      13       0.200000   6.370    0.552354  25.480   0.000
+pair_coeff          5      14       0.200000   6.670    0.699412  26.680   0.000
+pair_coeff          5      15       0.200000   6.510    0.647942  26.040   0.000
+pair_coeff          5      16       0.200000   6.070    0.346471  24.280  35.000
+pair_coeff          5      17       0.200000   6.460    0.390589  25.840  35.000
+pair_coeff          6       6       0.200000   6.020    0.478824  24.080   0.000
+pair_coeff          6       7       0.200000   6.100    0.559707  24.400   0.000
+pair_coeff          6       8       0.200000   5.970    0.199412  23.880   0.000
+pair_coeff          6       9       0.200000   5.600    0.493530  22.400   0.000
+pair_coeff          6      10       0.200000   6.190    0.611177  24.760   0.000
+pair_coeff          6      11       0.200000   5.790    0.578824  23.160   0.000
+pair_coeff          6      12       0.200000   5.530    0.500883  22.120   0.000
+pair_coeff          6      13       0.200000   6.100    0.552354  24.400   0.000
+pair_coeff          6      14       0.200000   6.400    0.699412  25.600   0.000
+pair_coeff          6      15       0.200000   6.240    0.647942  24.960   0.000
+pair_coeff          6      16       0.200000   5.800    0.346471  23.200   0.000
+pair_coeff          6      17       0.200000   6.190    0.390589  24.760   0.000
+pair_coeff          7       7       0.200000   6.180    0.640589  24.720   0.000
+pair_coeff          7       8       0.200000   6.050    0.280294  24.200   0.000
+pair_coeff          7       9       0.200000   5.680    0.574413  22.720   0.000
+pair_coeff          7      10       0.200000   6.270    0.692060  25.080   0.000
+pair_coeff          7      11       0.200000   5.870    0.659707  23.480   0.000
+pair_coeff          7      12       0.200000   5.610    0.581765  22.440   0.000
+pair_coeff          7      13       0.200000   6.180    0.633236  24.720   0.000
+pair_coeff          7      14       0.200000   6.480    0.780294  25.920   0.000
+pair_coeff          7      15       0.200000   6.320    0.728824  25.280   0.000
+pair_coeff          7      16       0.200000   5.880    0.427354  23.520   0.000
+pair_coeff          7      17       0.200000   6.270    0.471471  25.080   0.000
+pair_coeff          8       8       0.200000   5.920   -0.080000  23.680  35.000
+pair_coeff          8       9       0.200000   5.550    0.214118  22.200   0.000
+pair_coeff          8      10       0.200000   6.140    0.331765  24.560   0.000
+pair_coeff          8      11       0.200000   5.740    0.299412  22.960   0.000
+pair_coeff          8      12       0.200000   5.480    0.221471  21.920   0.000
+pair_coeff          8      13       0.200000   6.050    0.272942  24.200   0.000
+pair_coeff          8      14       0.200000   6.350    0.420000  25.400   0.000
+pair_coeff          8      15       0.200000   6.190    0.368529  24.760   0.000
+pair_coeff          8      16       0.200000   5.750    0.067060  23.000  35.000
+pair_coeff          8      17       0.200000   6.140    0.111177  24.560  35.000
+pair_coeff          9       9       0.200000   5.180    0.508236  20.720   0.000
+pair_coeff          9      10       0.200000   5.770    0.625883  23.080   0.000
+pair_coeff          9      11       0.200000   5.370    0.593530  21.480   0.000
+pair_coeff          9      12       0.200000   5.110    0.515589  20.440   0.000
+pair_coeff          9      13       0.200000   5.680    0.567060  22.720   0.000
+pair_coeff          9      14       0.200000   5.980    0.714118  23.920   0.000
+pair_coeff          9      15       0.200000   5.820    0.662648  23.280   0.000
+pair_coeff          9      16       0.200000   5.380    0.361178  21.520   0.000
+pair_coeff          9      17       0.200000   5.770    0.405295  23.080   0.000
+pair_coeff         10      10       0.200000   6.360    0.743530  25.440   0.000
+pair_coeff         10      11       0.200000   5.960    0.711177  23.840   0.000
+pair_coeff         10      12       0.200000   5.700    0.633236  22.800   0.000
+pair_coeff         10      13       0.200000   6.270    0.684707  25.080   0.000
+pair_coeff         10      14       0.200000   6.570    0.831765  26.280   0.000
+pair_coeff         10      15       0.200000   6.410    0.780295  25.640   0.000
+pair_coeff         10      16       0.200000   5.970    0.478825  23.880   0.000
+pair_coeff         10      17       0.200000   6.360    0.522942  25.440   0.000
+pair_coeff         11      11       0.200000   5.560    0.678824  22.240   0.000
+pair_coeff         11      12       0.200000   5.300    0.600883  21.200   0.000
+pair_coeff         11      13       0.200000   5.870    0.652354  23.480   0.000
+pair_coeff         11      14       0.200000   6.170    0.799412  24.680   0.000
+pair_coeff         11      15       0.200000   6.010    0.747942  24.040   0.000
+pair_coeff         11      16       0.200000   5.570    0.446472  22.280   0.000
+pair_coeff         11      17       0.200000   5.960    0.490589  23.840   0.000
+pair_coeff         12      12       0.200000   5.040    0.522942  20.160   0.000
+pair_coeff         12      13       0.200000   5.610    0.574413  22.440   0.000
+pair_coeff         12      14       0.200000   5.910    0.721471  23.640   0.000
+pair_coeff         12      15       0.200000   5.750    0.670000  23.000   0.000
+pair_coeff         12      16       0.200000   5.310    0.368531  21.240   0.000
+pair_coeff         12      17       0.200000   5.700    0.412648  22.800   0.000
+pair_coeff         13      13       0.200000   6.180    0.625883  24.720   0.000
+pair_coeff         13      14       0.200000   6.480    0.772942  25.920   0.000
+pair_coeff         13      15       0.200000   6.320    0.721471  25.280   0.000
+pair_coeff         13      16       0.200000   5.880    0.420001  23.520   0.000
+pair_coeff         13      17       0.200000   6.270    0.464119  25.080   0.000
+pair_coeff         14      14       0.200000   6.780    0.920000  27.120   0.000
+pair_coeff         14      15       0.200000   6.620    0.868529  26.480   0.000
+pair_coeff         14      16       0.200000   6.180    0.567060  24.720   0.000
+pair_coeff         14      17       0.200000   6.570    0.611177  26.280   0.000
+pair_coeff         15      15       0.200000   6.460    0.817059  25.840   0.000
+pair_coeff         15      16       0.200000   6.020    0.515589  24.080   0.000
+pair_coeff         15      17       0.200000   6.410    0.559707  25.640   0.000
+pair_coeff         16      16       0.200000   5.580    0.214119  22.320  35.000
+pair_coeff         16      17       0.200000   5.970    0.258237  23.880  35.000
+pair_coeff         17      17       0.200000   6.360    0.302354  25.440  35.000
+
+special_bonds lj/coul 0.0 0.0 0.0
+
+neighbor    3.5 multi
+neigh_modify  every 10 delay 0
+
+### Energy minimization
+minimize    1.0e-4 1.0e-6 1000 100000
+
+### production
+timestep    ${dt}
+reset_timestep 0
+
+velocity    all create $t ${seedV}
+fix         1 all langevin $t $t ${damp} ${seedT}
+fix         2 all nve
+
+thermo     ${thermointrv}
+thermo_style custom step evdwl ecoul ebond eangle edihed temp
+
+dump       VMD1 all xtc ${dumpintrv} traj.xtc
+
+run     ${runtime}
+
+write_restart restart.bin_protein
