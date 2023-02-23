@@ -1,0 +1,184 @@
+# IDP simulation
+
+###### VARIABLES #######
+variable    t equal 300
+variable    damp equal 1000
+variable    seedV equal 4928421
+variable    seedT equal 3278431
+variable    seedtemper equal 32784
+variable    dt equal 10.0
+variable    thermointrv equal 100000
+variable    dumpintrv equal 1000
+variable    temperintrv equal 1000
+variable    runtime equal 500000000
+
+units       real
+dimension   3
+boundary    p p p
+atom_style  full
+
+bond_style  harmonic
+angle_style bch
+dihedral_style gaussian/ljlambda
+
+pair_style  ljlambda 0.1 0.0 35.0
+dielectric  80.0
+
+read_data   in.data
+
+# pairwise coefficients
+
+bond_coeff          1   10.000000    3.800000
+
+angle_coeff         1    4.300000
+
+dihedral_coeff        1   -0.940000
+dihedral_coeff        2   -1.417500
+dihedral_coeff        3   -1.065000
+dihedral_coeff        4   -0.665000
+dihedral_coeff        5   -0.930000
+dihedral_coeff        6   -1.330000
+dihedral_coeff        7   -0.967500
+dihedral_coeff        8   -0.775000
+dihedral_coeff        9   -1.110000
+dihedral_coeff       10   -1.302500
+dihedral_coeff       11   -0.730000
+dihedral_coeff       12   -0.872500
+dihedral_coeff       13    0.412500
+dihedral_coeff       14    0.842500
+dihedral_coeff       15   -0.205000
+dihedral_coeff       16    1.842500
+dihedral_coeff       17    0.700000
+dihedral_coeff       18   -0.537500
+dihedral_coeff       19    0.605000
+dihedral_coeff       20    0.745000
+dihedral_coeff       21   -0.635000
+dihedral_coeff       22   -0.492500
+dihedral_coeff       23   -0.687500
+dihedral_coeff       24   -0.970000
+dihedral_coeff       25   -0.012500
+dihedral_coeff       26    0.270000
+dihedral_coeff       27   -0.352500
+dihedral_coeff       28   -0.350000
+dihedral_coeff       29   -0.685000
+dihedral_coeff       30   -0.827500
+dihedral_coeff       31   -0.495000
+dihedral_coeff       32   -0.255000
+dihedral_coeff       33   -0.617500
+dihedral_coeff       34   -0.760000
+dihedral_coeff       35   -0.732500
+dihedral_coeff       36   -0.257500
+dihedral_coeff       37   -0.282500
+dihedral_coeff       38   -0.397500
+dihedral_coeff       39   -0.830000
+dihedral_coeff       40   -0.425000
+dihedral_coeff       41   -0.330000
+dihedral_coeff       42   -0.092500
+dihedral_coeff       43   -0.300000
+dihedral_coeff       44    0.937500
+dihedral_coeff       45    0.225000
+dihedral_coeff       46    0.602500
+dihedral_coeff       47    0.080000
+dihedral_coeff       48    0.317500
+dihedral_coeff       49   -0.017500
+dihedral_coeff       50    0.077500
+dihedral_coeff       51   -0.020000
+dihedral_coeff       52   -0.355000
+dihedral_coeff       53    0.130000
+dihedral_coeff       54    0.462500
+dihedral_coeff       55    0.127500
+dihedral_coeff       56    0.267500
+dihedral_coeff       57    0.030000
+dihedral_coeff       58    0.742500
+dihedral_coeff       59   -0.590000
+dihedral_coeff       60   -0.690000
+dihedral_coeff       61   -0.160000
+dihedral_coeff       62    0.410000
+dihedral_coeff       63   -0.632500
+dihedral_coeff       64   -0.900000
+dihedral_coeff       65    0.195000
+dihedral_coeff       66    1.365000
+dihedral_coeff       67    0.812500
+dihedral_coeff       68   -0.695000
+dihedral_coeff       69   -0.786667
+
+pair_coeff          1       1       0.200000   6.180    0.596471  24.720   0.000
+pair_coeff          1       2       0.200000   5.610    0.559707  22.440   0.000
+pair_coeff          1       3       0.200000   5.680    0.552354  22.720   0.000
+pair_coeff          1       4       0.200000   5.930    0.552354  23.720   0.000
+pair_coeff          1       5       0.200000   5.880    0.405295  23.520   0.000
+pair_coeff          1       6       0.200000   6.320    0.706765  25.280   0.000
+pair_coeff          1       7       0.200000   5.900    0.552354  23.600   0.000
+pair_coeff          1       8       0.200000   6.100    0.537648  24.400   0.000
+pair_coeff          1       9       0.200000   5.340    0.545000  21.360   0.000
+pair_coeff          1      10       0.200000   5.870    0.637648  23.480   0.000
+pair_coeff          2       2       0.200000   5.040    0.522942  20.160   0.000
+pair_coeff          2       3       0.200000   5.110    0.515589  20.440   0.000
+pair_coeff          2       4       0.200000   5.360    0.515589  21.440   0.000
+pair_coeff          2       5       0.200000   5.310    0.368531  21.240   0.000
+pair_coeff          2       6       0.200000   5.750    0.670000  23.000   0.000
+pair_coeff          2       7       0.200000   5.330    0.515589  21.320   0.000
+pair_coeff          2       8       0.200000   5.530    0.500883  22.120   0.000
+pair_coeff          2       9       0.200000   4.770    0.508236  19.080   0.000
+pair_coeff          2      10       0.200000   5.300    0.600883  21.200   0.000
+pair_coeff          3       3       0.200000   5.180    0.508236  20.720   0.000
+pair_coeff          3       4       0.200000   5.430    0.508236  21.720   0.000
+pair_coeff          3       5       0.200000   5.380    0.361178  21.520   0.000
+pair_coeff          3       6       0.200000   5.820    0.662648  23.280   0.000
+pair_coeff          3       7       0.200000   5.400    0.508236  21.600   0.000
+pair_coeff          3       8       0.200000   5.600    0.493530  22.400   0.000
+pair_coeff          3       9       0.200000   4.840    0.500883  19.360   0.000
+pair_coeff          3      10       0.200000   5.370    0.593530  21.480   0.000
+pair_coeff          4       4       0.200000   5.680    0.508236  22.720   0.000
+pair_coeff          4       5       0.200000   5.630    0.361178  22.520   0.000
+pair_coeff          4       6       0.200000   6.070    0.662648  24.280   0.000
+pair_coeff          4       7       0.200000   5.650    0.508236  22.600   0.000
+pair_coeff          4       8       0.200000   5.850    0.493530  23.400   0.000
+pair_coeff          4       9       0.200000   5.090    0.500883  20.360   0.000
+pair_coeff          4      10       0.200000   5.620    0.593530  22.480   0.000
+pair_coeff          5       5       0.200000   5.580    0.214119  22.320  35.000
+pair_coeff          5       6       0.200000   6.020    0.515589  24.080   0.000
+pair_coeff          5       7       0.200000   5.600    0.361178  22.400   0.000
+pair_coeff          5       8       0.200000   5.800    0.346471  23.200   0.000
+pair_coeff          5       9       0.200000   5.040    0.353824  20.160   0.000
+pair_coeff          5      10       0.200000   5.570    0.446472  22.280   0.000
+pair_coeff          6       6       0.200000   6.460    0.817059  25.840   0.000
+pair_coeff          6       7       0.200000   6.040    0.662648  24.160   0.000
+pair_coeff          6       8       0.200000   6.240    0.647942  24.960   0.000
+pair_coeff          6       9       0.200000   5.480    0.655295  21.920   0.000
+pair_coeff          6      10       0.200000   6.010    0.747942  24.040   0.000
+pair_coeff          7       7       0.200000   5.620    0.508236  22.480   0.000
+pair_coeff          7       8       0.200000   5.820    0.493530  23.280   0.000
+pair_coeff          7       9       0.200000   5.060    0.500883  20.240   0.000
+pair_coeff          7      10       0.200000   5.590    0.593530  22.360   0.000
+pair_coeff          8       8       0.200000   6.020    0.478824  24.080   0.000
+pair_coeff          8       9       0.200000   5.260    0.486177  21.040   0.000
+pair_coeff          8      10       0.200000   5.790    0.578824  23.160   0.000
+pair_coeff          9       9       0.200000   4.500    0.493530  18.000   0.000
+pair_coeff          9      10       0.200000   5.030    0.586177  20.120   0.000
+pair_coeff         10      10       0.200000   5.560    0.678824  22.240   0.000
+
+special_bonds lj/coul 0.0 0.0 0.0
+
+neighbor    3.5 multi
+neigh_modify  every 10 delay 0
+
+### Energy minimization
+minimize    1.0e-4 1.0e-6 1000 100000
+
+### production
+timestep    ${dt}
+reset_timestep 0
+
+velocity    all create $t ${seedV}
+fix         1 all langevin $t $t ${damp} ${seedT}
+fix         2 all nve
+
+thermo     ${thermointrv}
+thermo_style custom step evdwl ecoul ebond eangle edihed temp
+
+dump       VMD1 all xtc ${dumpintrv} traj.xtc
+
+run     ${runtime}
+
+write_restart restart.bin_protein
